@@ -5,7 +5,7 @@ variable "cluster_name" {
 
 variable "cluster_version" {
   type = number
-  default = 1.26
+  default = 1.25
 }
 
 variable "region" {
