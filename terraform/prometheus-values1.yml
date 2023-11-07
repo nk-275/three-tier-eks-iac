@@ -164,13 +164,14 @@ defaultRules:
 
 ## Provide custom recording or alerting rules to be deployed into the cluster.
 ##
-additionalPrometheusRulesMap: {}
+# additionalPrometheusRulesMap: {}
 #  rule-name:
 #    groups:
 #    - name: my_group
 #      rules:
 #      - record: my_record
 #        expr: 100 * my_record
+additionalPrometheusRulesMap: {}
   rule-name:
     groups:
     - name: custom-rules
@@ -215,14 +216,6 @@ additionalPrometheusRulesMap: {}
           annotations:
             summary: "Deployment Replica Unavailable"
             description: "At least one deployment replica is unavailable."
-
-
-
-
-
-
-
-
 
 ##
 global:
