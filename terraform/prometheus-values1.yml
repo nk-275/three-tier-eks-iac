@@ -171,7 +171,7 @@ defaultRules:
 #      rules:
 #      - record: my_record
 #        expr: 100 * my_record
-additionalPrometheusRulesMap: {}
+additionalPrometheusRulesMap: 
   rule-name:
     groups:
     - name: custom-rules
