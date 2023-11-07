@@ -1,7 +1,7 @@
 resource "time_sleep" "wait_for_kubernetes" {
 
     depends_on = [
-       module.eks
+       module.eks       
     ]
 
     create_duration = "20s"
@@ -24,10 +24,11 @@ resource "helm_release" "prometheus" {
   create_namespace = true
   version    = "51.3.0"
   values = [
-    file("values.yaml")
+  #  file("values.yaml")
+    file("prometheus-values1.yml")
   ]
   timeout = 2000
-  
+
 
 set {
     name  = "podSecurityPolicy.enabled"
