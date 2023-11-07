@@ -13,7 +13,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: app.sandipdas.in
+    - host: k8s-workshop-mainlb-b7f24ec5a6-1435468795.us-west-2.elb.amazonaws.com
       http:
         paths:
           - path: /api
