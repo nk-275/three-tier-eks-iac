@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-elastic (1)
+  namespace: monitoring (2)
+  labels:
+    grafana_dashboard: "true"
+data:
+  grafana-elastic-dashboard.json: | (3)
+    ${indent(4, data)}

@@ -55,3 +55,11 @@ set {
     })
   }
 }
+
+
+resource "kubernetes_manifest" "elastic_dashboard" {
+  manifest = yamldecode(templatefile("${path.module}/templates/elastic-dashboard-configmap.yaml", {
+   name      = "grafana-elastic"
+   data      = file("${path.module}/files/grafana-elastic-dashboard.json")
+  }))
+}
