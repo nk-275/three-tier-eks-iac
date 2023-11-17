@@ -57,12 +57,6 @@ set {
 }
 
 
-# resource "kubernetes_manifest" "elastic_dashboard" {
-#   manifest = yamldecode(templatefile("${path.module}/elastic-dashboard-configmap.yaml", {
-#    name      = "grafana-elastic"
-#    data      = file("${path.module}/grafana-elastic-dashboard.json")
-#   }))
-# }
-
-
-
+resource "grafana_dashboard" "terraform_maintained" {
+  config_json = file("tf_dashboard.json")
+}

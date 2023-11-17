@@ -1,4 +1,3 @@
-
 resource "kubernetes_manifest" "elastic_dashboard" {
 manifest = yamldecode(templatefile("./elastic-dashboard-configmap.yaml", {
   name = "grafana-elastic"
